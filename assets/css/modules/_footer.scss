@@ -1,0 +1,102 @@
+.footer {
+  position: relative;
+  background-color: $color-primary;
+  box-shadow: -1px -1px 3px #b5b5b5, 1px 1px 3px #ffffff;
+  transition: all 0.6 ease;
+
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  &__container {
+    position: relative;
+    @include adaptiv-padding-y(30, 20);
+    padding-right: 10px;
+    padding-left: 10px;
+    @include adaptiv-font(12, 9);
+    border-top: 1px solid #b5b5b5;
+    text-align: center;
+    line-height: 1;
+    background-color: #b5b5b528;
+  }
+
+  &__disclaimer {
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-decoration-color: #b8b6b6;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  &__wrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    @include adaptiv-padding-y(30, 20);
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__btn {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s all;
+
+    &:hover {
+      .footer__git {
+        fill: white;
+        top: -2px !important;
+        left: -3px !important;
+      }
+      .footer__telegram {
+        fill: white;
+      }
+      .footer__codewars {
+        fill: white;
+      }
+    }
+    &-1:hover {
+      background-color: #b1361e;
+    }
+    &-2:hover {
+      background-color: #03a9f4;
+    }
+    &-3:hover {
+      background-color: black;
+    }
+  }
+
+  &__logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__telegram {
+    fill: #03a9f4;
+  }
+
+  &__codewars {
+    fill: #b1361e;
+  }
+}

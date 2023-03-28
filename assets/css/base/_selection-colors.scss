@@ -1,0 +1,15 @@
+::selection {
+  background: $beige;
+}
+::-moz-selection {
+  background: $beige;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: $beige;
+}

@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+
+  &-track {
+    background: transparent;
+    border-radius: 8px;
+  }
+
+  &-thumb {
+    background: $selection-colors;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.work__cards::-webkit-scrollbar {
+  display: none;
+}

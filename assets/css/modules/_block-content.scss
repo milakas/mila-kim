@@ -1,0 +1,29 @@
+.block-content {
+  position: relative;
+  text-align: center;
+  @include adaptiv-padding-x(300, 0);
+  @include adaptiv-padding-y(80, 60);
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    @include adaptiv-font(20, 16);
+    font-family: 'Marcellus', serif;
+    font-weight: 500;
+    color: $coloron-primary;
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    transition: all 0.3 ease;
+
+    &:hover {
+      animation: wave ease 1.3s infinite;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+//Header Section
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    box-shadow: 1px 1px 3px #b5b5b5, -1px -1px 3px #ffffff;
+    z-index: 2;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    @include adaptiv-padding-y(15, 10);
+    @media (max-width: 767px) {
+      height: 50px;
+      transition: height 0.3s ease-in-out;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 3;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 2vh;
+    @include adaptiv-font(33, 20.5);
+  }
+
+  &__nav {
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  &__menu {
+    @media (max-width: 767px) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 80px 10px;
+      background: $color-primary;
+      overflow: auto;
+      transition: all 0.3s ease-in;
+    }
+    &.active {
+      top: 0;
+    }
+  }
+
+  &__link {
+    @include adaptiv-padding-x(20, 16);
+    @include adaptiv-font(18, 16);
+    background-image: linear-gradient(
+      to bottom,
+      transparent 98%,
+      $coloron-secondary
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+
+    &:hover {
+      background-size: 100% 100%;
+      background-position-x: left;
+    }
+
+    @media (max-width: 767px) {
+      @include adaptiv-font(33, 20.5);
+    }
+  }
+
+  &__burger {
+    display: none;
+    @media (max-width: 767px) {
+      position: relative;
+      z-index: 3;
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 13px;
+    }
+    & span {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 100%;
+      height: 1px;
+      background-color: $coloron-primary;
+      transition: all 0.3s ease-in;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      background-color: $coloron-primary;
+      transition: all 0.3s ease-in;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &.active::before {
+      transform: rotate(45deg);
+      top: 6px;
+    }
+    &.active::after {
+      transform: rotate(-45deg);
+      bottom: 6px;
+    }
+    &.active span {
+      transform: scale(0);
+    }
+  }
+}

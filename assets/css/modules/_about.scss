@@ -1,0 +1,23 @@
+.about {
+  height: 100vh;
+  @include adaptiv-padding-x(300, 10);
+  @include adaptiv-padding-y(280, 240);
+  text-align: center;
+  background: url(../img/contact.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0 10px;
+
+  @media (min-width: 1280px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &__title {
+    @include adaptiv-font(60, 27);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $coloron-secondary;
+  }
+}

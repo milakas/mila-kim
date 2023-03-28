@@ -1,0 +1,46 @@
+.freelance {
+  @include adaptiv-padding-x(300, 0);
+  @include adaptiv-padding-y(260, 200);
+  text-align: center;
+  background: url(../img/contact.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0 10px;
+
+  @media (min-width: 1280px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include adaptiv-font(18, 14);
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    @include adaptiv-padding-x(35, 20);
+    @include adaptiv-padding-y(15, 10);
+    @include adaptiv-font(20, 14);
+    border: none;
+    overflow: hidden;
+    background-color: #fefefe;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    transition: all 0.3 ease;
+
+    &:hover {
+      background-color: $color-primary;
+      box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #e9e9e9;
+    }
+
+    &:active {
+      scale: 0.9;
+    }
+  }
+}

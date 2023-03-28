@@ -1,0 +1,22 @@
+.hero {
+  height: 100vh;
+  @include adaptiv-padding-x(300, 10);
+  @include adaptiv-padding-y(280, 240);
+  text-align: center;
+  background: url(../img/hero.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0 10px;
+
+  @media (min-width: 1280px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &__title {
+    @include adaptiv-font(60, 27);
+  }
+  &__text {
+    @include adaptiv-font(20, 14);
+    color: $coloron-secondary;
+  }
+}
