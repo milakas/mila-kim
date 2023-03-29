@@ -1125,8 +1125,6 @@ p {
 }
 .footer__btn:hover .footer__git {
   fill: white;
-  top: -2px !important;
-  left: -3px !important;
 }
 .footer__btn:hover .footer__telegram {
   fill: white;
@@ -1155,6 +1153,10 @@ p {
 }
 .footer__codewars {
   fill: #b1361e;
+}
+
+.git {
+  transform: scale(1.2);
 }
 
 .freelance {

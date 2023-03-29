@@ -63,8 +63,6 @@
     &:hover {
       .footer__git {
         fill: white;
-        top: -2px !important;
-        left: -3px !important;
       }
       .footer__telegram {
         fill: white;
@@ -99,4 +97,8 @@
   &__codewars {
     fill: #b1361e;
   }
+}
+
+.git {
+  transform: scale(1.2);
 }
