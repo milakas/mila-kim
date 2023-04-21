@@ -4,6 +4,13 @@
   @include adaptiv-padding-x(300, 0);
   @include adaptiv-padding-y(80, 60);
 
+  &__container {
+    position: relative;
+    padding: 30px 20px;
+    background: #f9f2f259;
+    box-shadow: 1px 1px 3px #b5b5b5, -1px -1px 3px #ffffff;
+  }
+
   &__title {
     margin-bottom: 10px;
   }
@@ -25,5 +32,12 @@
     &:hover {
       animation: wave ease 1.3s infinite;
     }
+  }
+
+  &__skills {
+    @include adaptiv-font(20, 16);
+    font-family: 'Marcellus', serif;
+    line-height: 1.7;
+    word-spacing: 15px;
   }
 }
