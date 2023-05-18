@@ -33,7 +33,8 @@ const toggleBurgerMenu = () => {
 const owl = $('.owl-carousel');
 const addOwlCarousel = () =>
   owl.owlCarousel({
-    loop: true,
+    loop: false,
+    center: true,
     nav: true,
     margin: 10,
     responsive: {

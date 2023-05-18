@@ -531,6 +531,7 @@ p {
 }
 .header__burger {
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .header__burger {

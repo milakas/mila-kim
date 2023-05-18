@@ -93,6 +93,7 @@
 
   &__burger {
     display: none;
+    cursor: pointer;
     @media (max-width: 767px) {
       position: relative;
       z-index: 3;
