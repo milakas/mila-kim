@@ -18,6 +18,7 @@
   }
 
   &__text {
+    @include adaptiv-font(20, 15);
     color: $coloron-secondary;
   }
 }

@@ -817,6 +817,18 @@ p {
 .about__text {
   color: #474040;
 }
+@media (max-width: 767px) {
+  .about__text {
+    font-size: calc(
+      15px + 8.5 * ((100vw - 320px) / 1280)
+    );
+  }
+}
+@media (min-width: 767px) {
+  .about__text {
+    font-size: calc(15px + 5 * (100vw / 1280));
+  }
+}
 
 .work__container {
   position: relative;
