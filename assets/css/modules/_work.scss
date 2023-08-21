@@ -12,6 +12,7 @@
 
   &__wrapper {
     position: relative;
+    margin: 0 auto;
     @include adaptiv-padding-x(130, 0);
     & .owl-dot span {
       height: 3px !important;
@@ -25,6 +26,9 @@
     & .owl-dot:hover span {
       background-color: $coloron-secondary !important;
     }
+    & .owl-stage {
+      margin: 0 auto;
+    }
 
     & .owl-prev,
     & .owl-next {
@@ -36,7 +40,7 @@
       width: 30px;
       height: 30px;
       border-radius: 100% !important;
-      @media (max-width: 767px) {
+      @media (max-width: 630px) {
         display: none !important;
       }
 
